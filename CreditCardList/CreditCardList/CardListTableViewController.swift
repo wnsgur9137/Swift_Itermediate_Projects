@@ -164,7 +164,7 @@ class CardListTableViewController: UITableViewController {
             // Firestore 삭제
             // Option 1
             let cardID = creditCardList[indexPath.row].id
-            db.collection("creditCardList").document("card\(cardID)").delete()
+//            db.collection("creditCardList").document("card\(cardID)").delete()
             
             // Option 2
             db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
