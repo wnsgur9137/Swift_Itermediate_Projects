@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AlertListCell" customModule="Drink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1L-KM-gyA">
+                        <rect key="frame" x="20" y="28" width="49" height="34"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P71-lW-HLv">
+                        <rect key="frame" x="69" y="10" width="132" height="60"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-rv-1fh">
+                        <rect key="frame" x="306" y="24.5" width="51" height="31"/>
+                        <connections>
+                            <action selector="alertSwitchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="htz-wk-ZvZ"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hFe-rv-1fh" secondAttribute="trailing" constant="20" id="3yS-Sf-Ynj"/>
+                    <constraint firstItem="hFe-rv-1fh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Iod-v5-GB0"/>
+                    <constraint firstItem="J1L-KM-gyA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LIb-2a-tiv"/>
+                    <constraint firstItem="P71-lW-HLv" firstAttribute="bottom" secondItem="J1L-KM-gyA" secondAttribute="bottom" constant="8" id="kwd-fV-3eu"/>
+                    <constraint firstItem="P71-lW-HLv" firstAttribute="leading" secondItem="J1L-KM-gyA" secondAttribute="trailing" id="uLU-rM-Opq"/>
+                    <constraint firstItem="P71-lW-HLv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uTj-ad-Xvv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="alertSwitch" destination="hFe-rv-1fh" id="rVI-Pl-Lxt"/>
+                <outlet property="meridiemLabel" destination="J1L-KM-gyA" id="0Xw-n4-72Q"/>
+                <outlet property="timeLabel" destination="P71-lW-HLv" id="knn-ll-9PS"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="140"/>
+        </tableViewCell>
+    </objects>
+</document>
