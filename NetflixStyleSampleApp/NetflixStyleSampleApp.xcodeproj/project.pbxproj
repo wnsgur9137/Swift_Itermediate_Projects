@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66915D5528C90A4D007E939A /* ContentCollectionViewRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66915D5428C90A4D007E939A /* ContentCollectionViewRankCell.swift */; };
 		66A9ED6428C6547B0089ECCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9ED6328C6547B0089ECCD /* AppDelegate.swift */; };
 		66A9ED6628C6547B0089ECCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9ED6528C6547B0089ECCD /* SceneDelegate.swift */; };
 		66A9ED6D28C6547C0089ECCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A9ED6C28C6547C0089ECCD /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66915D5428C90A4D007E939A /* ContentCollectionViewRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewRankCell.swift; sourceTree = "<group>"; };
 		66A9ED6028C6547B0089ECCD /* NetflixStyleSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixStyleSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A9ED6328C6547B0089ECCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66A9ED6528C6547B0089ECCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				66A9ED6328C6547B0089ECCD /* AppDelegate.swift */,
 				66A9ED6528C6547B0089ECCD /* SceneDelegate.swift */,
 				66A9ED7728C654C00089ECCD /* HomeViewController.swift */,
+				66915D5428C90A4D007E939A /* ContentCollectionViewRankCell.swift */,
 				66A9ED8428C6601C0089ECCD /* ContentCollectionViewHeader.swift */,
 				66A9ED8228C65EC70089ECCD /* ContentCollectionViewCell.swift */,
 				66A9ED8028C65B3D0089ECCD /* Content.swift */,
@@ -158,6 +161,7 @@
 				66A9ED6428C6547B0089ECCD /* AppDelegate.swift in Sources */,
 				66A9ED8528C6601C0089ECCD /* ContentCollectionViewHeader.swift in Sources */,
 				66A9ED6628C6547B0089ECCD /* SceneDelegate.swift in Sources */,
+				66915D5528C90A4D007E939A /* ContentCollectionViewRankCell.swift in Sources */,
 				66A9ED7828C654C00089ECCD /* HomeViewController.swift in Sources */,
 				66A9ED8128C65B3D0089ECCD /* Content.swift in Sources */,
 				66A9ED8328C65EC70089ECCD /* ContentCollectionViewCell.swift in Sources */,
