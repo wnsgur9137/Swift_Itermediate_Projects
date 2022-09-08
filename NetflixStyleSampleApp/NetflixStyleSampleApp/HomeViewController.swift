@@ -11,6 +11,7 @@ import SwiftUI
 class HomeViewController: UICollectionViewController {
     
     var contents: [Content] = []
+    var mainItem: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +22,21 @@ class HomeViewController: UICollectionViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.hidesBarsOnSwipe = true   // 스와이프가 일어나면 네비게이션 바를 가린다.
         
+        
         // 넷플릭스 아이콘
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "netflix_icon"), style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "netflix_icon"), style: .plain, target: nil, action: nil)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "netflix_icon"), style: .plain, target: nil, action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
         
         // Data 설정 가져오기
         contents = getContents()
+        mainItem = contents.first?.contentItem.randomElement()
         
         // CollectionView Item(Cell) 설정
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
         collectionView.register(ContentCollectionViewRankCell.self, forCellWithReuseIdentifier: "ContentCollectionViewRankCell")
+        collectionView.register(ContentCollectionViewMainCell.self, forCellWithReuseIdentifier: "ContentCollectionViewMainCell")
         collectionView.register(ContentCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentCollectionViewHeader")
         
         collectionView.collectionViewLayout = layout()
@@ -56,6 +61,8 @@ class HomeViewController: UICollectionViewController {
                 return self.createLargeTypeSection()
             case .rank:
                 return self.createRankTypeSection()
+            case .main:
+                return self.createMainTypeSection()
             default:
                 return nil
             }
@@ -136,6 +143,24 @@ class HomeViewController: UICollectionViewController {
         return sectionHeader
     }
     
+    // Main Section Layout 설정
+    private func createMainTypeSection() -> NSCollectionLayoutSection {
+        // item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(450))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        // section
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 0, leading: 0, bottom: 20, trailing: 0)
+        
+        return section
+    }
+    
+    
 }
 
 // UICollectionView DataSource, Delegate
@@ -145,7 +170,8 @@ extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if contents[section].sectionType == .basic  ||
             contents[section].sectionType == .large  ||
-            contents[section].sectionType == .rank {
+            contents[section].sectionType == .rank ||
+            contents[section].sectionType == .main {
             switch section {
             case 0:
                 return 1
@@ -169,6 +195,13 @@ extension HomeViewController {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCollectionViewRankCell", for: indexPath) as? ContentCollectionViewRankCell else { return UICollectionViewCell() }
             cell.imageView.image = contents[indexPath.section].contentItem[indexPath.row].image
             cell.rankLabel.text = String(describing: indexPath.row + 1)
+            return cell
+        case .main:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCollectionViewMainCell", for: indexPath) as? ContentCollectionViewMainCell else { return UICollectionViewCell() }
+            
+            cell.imageView.image = mainItem?.image
+            cell.descriptionLabel.text = mainItem?.description
+            
             return cell
         default:
             return UICollectionViewCell()
@@ -202,7 +235,7 @@ extension HomeViewController {
 // swiftUI를 활용한 미리보기
 struct HomeViewController_Previews: PreviewProvider {
     static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
+        Container().preferredColorScheme(.dark).previewDevice("iPhone 13 Pro").edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
     }
     
     struct Container: UIViewControllerRepresentable {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6621ACF528CA4DCC00F90B95 /* ContentCollectionViewMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6621ACF428CA4DCC00F90B95 /* ContentCollectionViewMainCell.swift */; };
+		6621ACF728CA531200F90B95 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6621ACF628CA531200F90B95 /* UIButton.swift */; };
 		66915D5528C90A4D007E939A /* ContentCollectionViewRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66915D5428C90A4D007E939A /* ContentCollectionViewRankCell.swift */; };
 		66A9ED6428C6547B0089ECCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9ED6328C6547B0089ECCD /* AppDelegate.swift */; };
 		66A9ED6628C6547B0089ECCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9ED6528C6547B0089ECCD /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6621ACF428CA4DCC00F90B95 /* ContentCollectionViewMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewMainCell.swift; sourceTree = "<group>"; };
+		6621ACF628CA531200F90B95 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		66915D5428C90A4D007E939A /* ContentCollectionViewRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewRankCell.swift; sourceTree = "<group>"; };
 		66A9ED6028C6547B0089ECCD /* NetflixStyleSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixStyleSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A9ED6328C6547B0089ECCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,10 +73,12 @@
 				66A9ED6328C6547B0089ECCD /* AppDelegate.swift */,
 				66A9ED6528C6547B0089ECCD /* SceneDelegate.swift */,
 				66A9ED7728C654C00089ECCD /* HomeViewController.swift */,
+				6621ACF428CA4DCC00F90B95 /* ContentCollectionViewMainCell.swift */,
 				66915D5428C90A4D007E939A /* ContentCollectionViewRankCell.swift */,
 				66A9ED8428C6601C0089ECCD /* ContentCollectionViewHeader.swift */,
 				66A9ED8228C65EC70089ECCD /* ContentCollectionViewCell.swift */,
 				66A9ED8028C65B3D0089ECCD /* Content.swift */,
+				6621ACF628CA531200F90B95 /* UIButton.swift */,
 				66A9ED6C28C6547C0089ECCD /* Assets.xcassets */,
 				66A9ED6E28C6547C0089ECCD /* LaunchScreen.storyboard */,
 				66A9ED7128C6547C0089ECCD /* Info.plist */,
@@ -163,8 +169,10 @@
 				66A9ED6628C6547B0089ECCD /* SceneDelegate.swift in Sources */,
 				66915D5528C90A4D007E939A /* ContentCollectionViewRankCell.swift in Sources */,
 				66A9ED7828C654C00089ECCD /* HomeViewController.swift in Sources */,
+				6621ACF528CA4DCC00F90B95 /* ContentCollectionViewMainCell.swift in Sources */,
 				66A9ED8128C65B3D0089ECCD /* Content.swift in Sources */,
 				66A9ED8328C65EC70089ECCD /* ContentCollectionViewCell.swift in Sources */,
+				6621ACF728CA531200F90B95 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

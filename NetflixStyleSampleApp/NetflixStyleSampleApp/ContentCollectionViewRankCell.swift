@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ContentCollectionViewRankCell: UICollectionViewCell {
     let imageView = UIImageView()
