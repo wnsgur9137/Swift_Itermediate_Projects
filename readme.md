@@ -32,7 +32,7 @@ Itermediate 프로젝트
 
 # **1. Spotify 스타일 로그인 화면**
 
-[Spotify 스타일 로그인 화면 파일](https://github.com/wnsgur9137/Swift_basic_projects/tree/master/QuotesGenerator)
+[Spotify 스타일 로그인 화면 파일](https://github.com/wnsgur9137/Swift_Itermediate_Projects/tree/master/SpotifyLoginSampleApp)
 
 <br>
 <br>
@@ -40,7 +40,7 @@ Itermediate 프로젝트
 
 # **2. 신용카드 추천 리스트 앱**
 
-[신용카드 추천 리스트 앱](https://github.com/wnsgur9137/Swift_basic_projects/tree/master/LEDBoard)
+[신용카드 추천 리스트 앱](https://github.com/wnsgur9137/Swift_Itermediate_Projects/tree/master/CreditCardList)
 
 <br>
 <br>
@@ -48,7 +48,7 @@ Itermediate 프로젝트
 
 # **3. 실시간 공지사항 팝업 앱**
 
-[실시간 공지사항 팝업 앱](https://github.com/wnsgur9137/Swift_basic_projects/tree/master/Calculator)
+[실시간 공지사항 팝업 앱](https://github.com/wnsgur9137/Swift_Itermediate_Projects/tree/master/Notice)
 
 <br>
 <br>
@@ -56,7 +56,7 @@ Itermediate 프로젝트
 
 # **4. 재난문자 푸시 알림 앱**
 
-[재난문자 푸시 알림 앱](https://github.com/wnsgur9137/Swift_basic_projects/tree/master/ToDoList)
+[재난문자 푸시 알림 앱](https://github.com/wnsgur9137/Swift_Itermediate_Projects/tree/master/Warning)
 
 <br>
 <br>
@@ -64,7 +64,7 @@ Itermediate 프로젝트
 
 # **5. 넷플릭스 스타일 영화 추천 앱**
 
-[넷플릭스스타일영화추천앱](https://github.com/wnsgur9137/Swift_basic_projects/tree/master/Diary)
+[넷플릭스 스타일 영화 추천 앱](https://github.com/wnsgur9137/Swift_Itermediate_Projects/tree/master/NetflixStyleSampleApp)
 
 <br>
 <br>
@@ -72,7 +72,7 @@ Itermediate 프로젝트
 
 # **6. 브루어리 소개 앱**
 
-[브루어리 소개 앱](https://github.com/wnsgur9137/Swift_basic_projects/tree/master/pomodoroTimer)
+[브루어리 소개 앱](https://github.com/wnsgur9137/Swift_Itermediate_Projects/tree/master/Brewery)
 
 <br>
 <br>
